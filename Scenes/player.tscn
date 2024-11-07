@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_keg85"]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 6
 script = ExtResource("1_keg85")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
@@ -13,3 +14,15 @@ texture = ExtResource("1_gjuy8")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(1, -84, 8, -55, 27, -23, 29, 28, 27, 39, 44, 51, 48, 30, 59, 31, 60, 85, 48, 87, 45, 77, 12, 75, 14, 88, -11, 86, -11, 74, -47, 79, -48, 88, -57, 87, -55, 32, -50, 27, -44, 50, -24, 42, -25, -21, -10, -56)
+
+[node name="LaserLeftStart" type="Marker2D" parent="."]
+position = Vector2(-51, 4)
+
+[node name="LaserRightStart" type="Marker2D" parent="."]
+position = Vector2(56, 4)
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

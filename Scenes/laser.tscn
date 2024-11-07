@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqdxhp3g4kbfm"]
+[gd_scene load_steps=4 format=3 uid="uid://dqdxhp3g4kbfm"]
 
+[ext_resource type="Script" path="res://Scenes/laser.gd" id="1_4n8c0"]
 [ext_resource type="Texture2D" uid="uid://cvyn4qn7iodbs" path="res://laser.png" id="1_5teq1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3d3ey"]
@@ -7,6 +8,9 @@ radius = 20.8235
 height = 485.882
 
 [node name="laser" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_4n8c0")
 
 [node name="laserImage" type="Sprite2D" parent="."]
 scale = Vector2(0.144068, 0.144068)
