@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bv54du84vhk6m"]
+[gd_scene load_steps=14 format=3 uid="uid://bv54du84vhk6m"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_cy2sy"]
 [ext_resource type="Texture2D" uid="uid://c5jurakn0jpe1" path="res://bg.jpg" id="1_oogyt"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ckx606b5qjs3c" path="res://Meteors/4.png" id="7_7resa"]
 [ext_resource type="Texture2D" uid="uid://dp70u1bw1vosq" path="res://Meteors/5.png" id="8_areyo"]
 [ext_resource type="Texture2D" uid="uid://ow7ub256bfdn" path="res://Meteors/6.png" id="9_cvko5"]
+[ext_resource type="PackedScene" uid="uid://dmgviu2gr7juf" path="res://ui.tscn" id="10_apaoo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6n5cj"]
 animations = [{
@@ -49,6 +50,7 @@ script = ExtResource("1_cy2sy")
 position = Vector2(657.5, 363)
 scale = Vector2(2.48704, 2.19444)
 texture = ExtResource("1_oogyt")
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_16s73")]
 position = Vector2(684, 476)
@@ -91,6 +93,7 @@ frame = 1
 frame_progress = 0.820891
 
 [node name="Borders" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
 collision_layer = 4
@@ -125,8 +128,11 @@ position = Vector2(649, 766)
 shape = SubResource("RectangleShape2D_bkgr7")
 
 [node name="Meteors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Lasers" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("10_apaoo")]
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="Borders/StaticBody2D3/MeteorTimer" to="." method="_on_meteor_timer_timeout"]
