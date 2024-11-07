@@ -1,8 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv54du84vhk6m"]
+[gd_scene load_steps=13 format=3 uid="uid://bv54du84vhk6m"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_cy2sy"]
 [ext_resource type="Texture2D" uid="uid://c5jurakn0jpe1" path="res://bg.jpg" id="1_oogyt"]
 [ext_resource type="PackedScene" uid="uid://cjm6rk3ufnxtu" path="res://Scenes/player.tscn" id="2_16s73"]
+[ext_resource type="Texture2D" uid="uid://bdwuuuuq0uxra" path="res://Meteors/1.png" id="4_6dpun"]
+[ext_resource type="Texture2D" uid="uid://cba6qiu26u5hj" path="res://Meteors/2.png" id="5_gdl58"]
+[ext_resource type="Texture2D" uid="uid://b31d08qe2e2v2" path="res://Meteors/3.png" id="6_kraay"]
+[ext_resource type="Texture2D" uid="uid://ckx606b5qjs3c" path="res://Meteors/4.png" id="7_7resa"]
+[ext_resource type="Texture2D" uid="uid://dp70u1bw1vosq" path="res://Meteors/5.png" id="8_areyo"]
+[ext_resource type="Texture2D" uid="uid://ow7ub256bfdn" path="res://Meteors/6.png" id="9_cvko5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6n5cj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6dpun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gdl58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kraay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7resa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_areyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cvko5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gly71"]
 size = Vector2(77, 795.5)
@@ -20,6 +52,43 @@ texture = ExtResource("1_oogyt")
 
 [node name="Player" parent="." instance=ExtResource("2_16s73")]
 position = Vector2(684, 476)
+
+[node name="FakeMeteors" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakeMeteors"]
+scale = Vector2(0.23254, 0.23)
+sprite_frames = SubResource("SpriteFrames_6n5cj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.820891
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="FakeMeteors"]
+scale = Vector2(0.23254, 0.23)
+sprite_frames = SubResource("SpriteFrames_6n5cj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.820891
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="FakeMeteors"]
+scale = Vector2(0.23254, 0.23)
+sprite_frames = SubResource("SpriteFrames_6n5cj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.820891
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="FakeMeteors"]
+scale = Vector2(0.23254, 0.23)
+sprite_frames = SubResource("SpriteFrames_6n5cj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.820891
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="FakeMeteors"]
+scale = Vector2(0.23254, 0.23)
+sprite_frames = SubResource("SpriteFrames_6n5cj")
+autoplay = "default"
+frame = 1
+frame_progress = 0.820891
 
 [node name="Borders" type="Node2D" parent="."]
 

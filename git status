@@ -1,0 +1,26 @@
+[33mcommit c1e331b0ac282f5db830f4247e6c9d5c277d2e04[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Merge: eb128c9 adf929b
+Author: Jonathan Stroud <jstroud107@gmail.com>
+Date:   Wed Nov 6 20:25:25 2024 -0500
+
+    Merge branch 'master' of github.com:jstroud107/rocket-game
+
+[33mcommit eb128c9fd94b2db36ae8c826b1682dccc8a349a2[m
+Author: Jonathan Stroud <jstroud107@gmail.com>
+Date:   Wed Nov 6 20:24:51 2024 -0500
+
+    updating the game files
+
+[33mcommit adf929bd823160dce9825797f3cada99edc38451[m
+Author: jstroud107 <51871638+jstroud107@users.noreply.github.com>
+Date:   Sat Nov 2 13:14:29 2024 -0400
+
+    Create README.md
+    
+    Just a simple readme file.
+
+[33mcommit 79d118deea665cfe6d7045b582422bd5ba330068[m
+Author: Jonathan Stroud <jstroud107@gmail.com>
+Date:   Sat Nov 2 13:11:00 2024 -0400
+
+    This is the file from Ezra

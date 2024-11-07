@@ -4,6 +4,24 @@ extends Node2D
 var meteor_scene: PackedScene = load("res://Scenes/meteor.tscn")
 var laser_scene: PackedScene = load("res://Scenes/laser.tscn")
 
+func _ready():
+	#fake meteors
+	var size := get_viewport().get_visible_rect().size
+	var rng := RandomNumberGenerator.new()
+	for meteor in $FakeMeteors.get_children():
+		# position
+		var random_x = rng.randi_range(0, int(size.x))
+		var random_y = rng.randi_range(0, int(size.y))
+		meteor.position = Vector2(random_x, random_y)
+		
+		# scale
+		var random_scale = rng.randf_range(0,0.25)
+		meteor.scale = Vector2(random_scale,random_scale)
+		
+		# speed
+		meteor.speed_scale = rng.randf_range(0.6,1.4)	
+		
+
 func _on_meteor_timer_timeout() -> void:
 	#2. Create an instance
 	var meteor = meteor_scene.instantiate()
